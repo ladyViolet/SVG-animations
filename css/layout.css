@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(200px, 960px);
+  justify-content: center;
+  grid-gap: 1em;
+}
+
+header{
+  font-family: 'Amatic SC', cursive;
+  font-size: 3em;
+  text-align: center;
+}
+
+@keyframes laura-bus {
+  0% {transform: translateX(-660px) rotateY(0deg);}
+  30% {transform: translateX(700px);}
+  31% {transform: translateX(700px) rotateY(180deg); transform-origin: 700px;}
+  99% {transform: translateX(-660px) rotateY(180deg);}
+  100% {transform: translateX(-660px) rotateY(0deg); transform-origin: -660px;}
+}
+
+@keyframes laura-bus-reifen-1 {
+  0%   { transform-origin: 681.636px 184.036px; }
+  49%  { transform-origin: 681.636px 184.036px; transform: rotate(1400deg); }
+  100% { transform-origin: 681.636px 184.036px; transform: rotate(3600deg); }
+}
+
+@keyframes laura-bus-reifen-2 {
+  0%   { transform-origin: 387.128px 183.916px; }
+  50%  { transform-origin: 387.128px 183.916px; transform: rotate(1400deg); }
+  100% { transform-origin: 387.128px 183.916px; transform: rotate(3600deg); }
+}
+
+.bus #layer2,
+.bus #layer2 #layer1,
+.bus #layer2 #layer3 {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-duration: 8s;
+}
+
+.bus #layer2 {
+  animation-name: laura-bus;
+}
+
+.bus #layer2 #layer1 {
+  animation-name: laura-bus-reifen-1;
+}
+
+.bus #layer2 #layer3 {
+  animation-name: laura-bus-reifen-2;
+}
