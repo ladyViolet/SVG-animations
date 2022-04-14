@@ -11,21 +11,18 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  margin: 0;
+.grid-container {
   display: grid;
-  grid-template-columns: minmax(200px, 960px);
-  justify-content: center;
-  grid-gap: 1em;
+  row-gap: 50px;
 }
 
 header {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Roboto Mono', monospace;
   font-size: 3em;
   text-align: center;
 }
 
-.van-animation .h1{
+.van-animation h1{
   font-family: 'Amatic SC', cursive;
   font-size: 3em;
   text-align: center;
@@ -33,13 +30,12 @@ header {
 
 .cat-peekaboo {
   background-color: #afeeeeff;
-	max-width:794px;
 }
 
-.cat-peekaboo .h1 {
-	font-family: 'Parisienne', cursive;
+.cat-peekaboo h1 {
+  font-family: 'Parisienne', cursive;
   font-size: 3em;
-	font-weight: normal;
+  font-weight: normal;
   text-align: center;
 }
 
