@@ -17,13 +17,13 @@ html {
 }
 
 header {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Amatic SC', cursive;
   font-size: 3em;
   text-align: center;
 }
 
 .van-animation h1{
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Roboto Mono', monospace;
   font-size: 3em;
   text-align: center;
 }
