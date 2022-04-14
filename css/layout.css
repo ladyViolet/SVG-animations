@@ -1,4 +1,4 @@
-* {
+{
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -19,13 +19,33 @@ body {
   grid-gap: 1em;
 }
 
-header{
+header {
   font-family: 'Amatic SC', cursive;
   font-size: 3em;
   text-align: center;
 }
 
-@keyframes laura-bus {
+.van-animation .h1{
+  font-family: 'Amatic SC', cursive;
+  font-size: 3em;
+  text-align: center;
+}
+
+.cat-peekaboo {
+  background-color: #afeeeeff;
+	max-width:794px;
+}
+
+.cat-peekaboo .h1 {
+	font-family: 'Parisienne', cursive;
+  font-size: 3em;
+	font-weight: normal;
+  text-align: center;
+}
+
+/*van-animation*/
+
+@keyframes bus-drive {
   0% {transform: translateX(-660px) rotateY(0deg);}
   30% {transform: translateX(700px);}
   31% {transform: translateX(700px) rotateY(180deg); transform-origin: 700px;}
@@ -33,13 +53,13 @@ header{
   100% {transform: translateX(-660px) rotateY(0deg); transform-origin: -660px;}
 }
 
-@keyframes laura-bus-reifen-1 {
+@keyframes bus-drive-wheel-1 {
   0%   { transform-origin: 681.636px 184.036px; }
   49%  { transform-origin: 681.636px 184.036px; transform: rotate(1400deg); }
   100% { transform-origin: 681.636px 184.036px; transform: rotate(3600deg); }
 }
 
-@keyframes laura-bus-reifen-2 {
+@keyframes bus-drive-wheel-2 {
   0%   { transform-origin: 387.128px 183.916px; }
   50%  { transform-origin: 387.128px 183.916px; transform: rotate(1400deg); }
   100% { transform-origin: 387.128px 183.916px; transform: rotate(3600deg); }
@@ -55,13 +75,21 @@ header{
 }
 
 .bus #layer2 {
-  animation-name: laura-bus;
+  animation-name: bus-drive;
 }
 
 .bus #layer2 #layer1 {
-  animation-name: laura-bus-reifen-1;
+  animation-name: bus-drive-wheel-1;
 }
 
 .bus #layer2 #layer3 {
-  animation-name: laura-bus-reifen-2;
+  animation-name: bus-drive-wheel-2;
 }
+
+/*cat-animation*/
+  #face:hover {
+	transition: transform 0.3s ease-out;
+	transform: translate(0.0px, -9px);
+	transition-timing-function: ease-out;
+ }
+
