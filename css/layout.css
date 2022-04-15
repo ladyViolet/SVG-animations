@@ -1,52 +1,49 @@
-{
-  box-sizing: border-box;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-kerning: auto;
-}
-
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-}
-
 .grid-container {
   display: grid;
-  row-gap: 50px;
+  grid-gap: 0px; 
 }
 
-header {
-  font-family: 'Amatic SC', cursive;
+header, .animations {
+  font-family: 'Square Peg', cursive;
   font-size: 3em;
   text-align: center;
 }
 
-.van-animation h1{
-  font-family: 'Roboto Mono', monospace;
-  font-size: 3em;
-  text-align: center;
+.van-animation {
+  background-color: #eab676;
+  padding-bottom: 1px;
 }
 
 .cat-peekaboo {
   background-color: #afeeeeff;
+  padding-bottom: 1px;
 }
 
-.cat-peekaboo h1 {
-  font-family: 'Parisienne', cursive;
-  font-size: 5em;
-  font-weight: normal;
-  text-align: center;
+/*text-animation*/
+/*
+@keyframes letterBounce {
+  from {
+    margin-left: 0px;
+  } to {
+    margin-left: 50px;
+  }
 }
 
+
+.headline #letter_current {
+  animation-name: letterPop;
+  animation-iteration-count: infinite;
+  transition: ease-in-out;
+  animation-duration: 2s;
+}
+*/
 /*van-animation*/
-
 @keyframes bus-drive {
-  0% {transform: translateX(-660px) rotateY(0deg);}
-  30% {transform: translateX(700px);}
-  31% {transform: translateX(700px) rotateY(180deg); transform-origin: 700px;}
-  99% {transform: translateX(-660px) rotateY(180deg);}
-  100% {transform: translateX(-660px) rotateY(0deg); transform-origin: -660px;}
+  0% { transform: translateX(-660px) rotateY(0deg);}
+  30% { transform: translateX(700px);}
+  31% { transform: translateX(700px) rotateY(180deg); transform-origin: 700px;}
+  99% { transform: translateX(-660px) rotateY(180deg);}
+  100% { transform: translateX(-660px) rotateY(0deg); transform-origin: -660px;}
 }
 
 @keyframes bus-drive-wheel-1 {
@@ -67,7 +64,7 @@ header {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  animation-duration: 8s;
+  animation-duration: 20s;
 }
 
 .bus #layer2 {
