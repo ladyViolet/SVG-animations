@@ -31,3 +31,14 @@ async function lettersDown() {
         }
     }
 }
+
+async function blinkyStars() {
+    for (let i = 1; i <= 8; i++) {
+        let star = document.getElementById("star" + i);
+        star.style.animation = "show50percent 0.3s ease alternate infinite";
+        await timer(10);
+        if (i == 8) {
+            i = 1;
+        }
+    }
+}
