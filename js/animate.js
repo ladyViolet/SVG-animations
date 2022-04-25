@@ -42,3 +42,10 @@ async function blinkyStars() {
         }
     }
 }
+
+window.addEventListener("load", initFunctions, true); 
+
+function initFunctions(){  
+    lettersUp();
+    blinkyStars();
+ };
